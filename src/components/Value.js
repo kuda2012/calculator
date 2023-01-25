@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Value.css";
 
-const Value = ({ displayNumber }) => {
-  return <div className="Value">{displayNumber}</div>;
+const Value = ({ currentCalculation }) => {
+  return <div className="Value">{currentCalculation}</div>;
 };
 export default Value;

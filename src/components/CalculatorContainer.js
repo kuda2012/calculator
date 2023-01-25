@@ -8,14 +8,20 @@ import "../styles/CalculatorContainer.css";
 import "../styles/Column.css";
 
 const CalculatorContainer = () => {
-  const [displayNumber, setDisplayNumber] = useState(0);
+  const [currentCalculation, setcurrentCalculation] = useState(0);
+  const operations = ["+", "-", "/", "*"];
   return (
     <Container className="CalculatorContainer">
-      <DisplayWindow displayNumber={displayNumber} />
-      <Operations setDisplayNumber={setDisplayNumber} />
+      <DisplayWindow currentCalculation={currentCalculation} />
+      <Operations
+        setcurrentCalculation={setcurrentCalculation}
+        currentCalculation={currentCalculation}
+        operations={operations}
+      />
       <NumbersDecimalEquals
-        setDisplayNumber={setDisplayNumber}
-        displayNumber={displayNumber}
+        setcurrentCalculation={setcurrentCalculation}
+        currentCalculation={currentCalculation}
+        operations={operations}
       />
     </Container>
   );

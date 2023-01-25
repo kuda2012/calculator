@@ -4,11 +4,11 @@ import Operation from "./Operation.js";
 import ClearText from "./ClearText.js";
 import Value from "./Value.js";
 import "../styles/Column.css";
-const DisplayWindow = ({ displayNumber }) => {
+const DisplayWindow = ({ currentCalculation }) => {
   return (
     <Row>
       <Col className="Column">
-        <Value displayNumber={displayNumber}></Value>
+        <Value currentCalculation={currentCalculation}></Value>
       </Col>
     </Row>
   );

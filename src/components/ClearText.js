@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../styles/ClearText.css";
 
-const ClearText = ({ setDisplayNumber }) => {
+const ClearText = ({ setcurrentCalculation }) => {
   return (
-    <div className="ClearText" onClick={() => setDisplayNumber(0)}>
+    <div className="ClearText" onClick={() => setcurrentCalculation(0)}>
       Del
     </div>
   );

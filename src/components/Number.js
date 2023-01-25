@@ -1,27 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { appendCurrentCalculation } from "../helpers/appendCurrentCalculation";
+import { solveOperand } from "../helpers/solveOperand";
 
 const Number = ({
   number,
   decimal,
   equal,
-  setDisplayNumber,
-  displayNumber,
+  setcurrentCalculation,
+  currentCalculation,
+  operations,
 }) => {
-  function appendDisplayNumber() {
-    if (displayNumber === 0) {
-      setDisplayNumber(number);
-    } else {
-      if (decimal && !String(displayNumber).includes(".")) {
-        setDisplayNumber(String(displayNumber).concat(decimal));
-      } else {
-        console.log("hi", parseFloat(String(displayNumber).concat(number)));
-        setDisplayNumber(parseFloat(String(displayNumber).concat(number)));
-      }
-    }
-  }
-
   return (
-    <div onClick={() => appendDisplayNumber()}>
+    <div
+      onClick={() => {
+        equal
+          ? solveOperand({ currentCalculation, setcurrentCalculation })
+          : appendCurrentCalculation({
+              number,
+              decimal,
+              currentCalculation,
+              setcurrentCalculation,
+              operations,
+            });
+      }}
+    >
       {!isNaN(number) ? number : decimal ? decimal : equal}
     </div>
   );
