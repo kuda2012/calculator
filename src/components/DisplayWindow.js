@@ -4,6 +4,9 @@ import Operation from "./Operation.js";
 import ClearText from "./ClearText.js";
 import Value from "./Value.js";
 import "../styles/Column.css";
+/**
+ * This is window where you can see the values of what you have inputted
+ */
 const DisplayWindow = ({ currentCalculation }) => {
   return (
     <Row>

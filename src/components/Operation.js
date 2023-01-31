@@ -8,6 +8,9 @@ const Operation = ({
   setcurrentCalculation,
   operations,
 }) => {
+  /**
+   * Mathmatical operator button.  + - / *
+   */
   return (
     <div
       className="Operation"

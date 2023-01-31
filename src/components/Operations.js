@@ -11,6 +11,9 @@ const Operations = ({
   currentCalculation,
   operations,
 }) => {
+  /**
+   * Top Row of buttons on calculator. Displays all the mathematical operations and a Delete button
+   */
   return (
     <Row>
       {operations.map((operation, i) => {

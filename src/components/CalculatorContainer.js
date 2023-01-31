@@ -7,6 +7,7 @@ import NumbersDecimalEquals from "./NumbersDecimalEquals.js";
 import "../styles/CalculatorContainer.css";
 import "../styles/Column.css";
 
+/**Container that the calculator will go in*/
 const CalculatorContainer = () => {
   const [currentCalculation, setcurrentCalculation] = useState(0);
   const operations = ["+", "-", "/", "*"];

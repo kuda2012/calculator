@@ -7,6 +7,7 @@ const NumbersDecimalEquals = ({
   setcurrentCalculation,
   operations,
 }) => {
+  /**Calculator buttons for 0-9 plus the decimal and equal sign*/
   return (
     <>
       <Row>

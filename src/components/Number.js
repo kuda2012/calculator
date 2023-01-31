@@ -10,6 +10,9 @@ const Number = ({
   currentCalculation,
   operations,
 }) => {
+  /**
+   * Button for numbers, =, or .
+   * */
   return (
     <div
       onClick={() => {
